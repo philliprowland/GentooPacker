@@ -28,9 +28,9 @@
       "disk_size": 60000,
       "guest_os_type": "linux",
       "headless": true,
-      "iso_checksum": "20dc09c811940c8742a9d1c7fa6da7cf8eaecf6c24797c67a00ba3d36e80d66f3d2555c6dbe9be303c0304cbdf51eaaca2deda8f523872912f58119663b4ffc5",
+      "iso_checksum": "b53d812aa2c7b441badee3254cbb0f9a984d0d28833db003e192582b7b0749ab647eeec72b9b4cdfedbfceab4d1e5f3ff987d92cf14bfeba0770d06c0b01948c",
       "iso_checksum_type": "sha512",
-      "iso_url": "http://distfiles.gentoo.org/releases/amd64/autobuilds/{{user `stage3`}}/install-amd64-minimal-{{user `stage3`}}.iso",
+      "iso_url": "/home/phillip/Downloads/images/install-amd64-minimal-{{user `stage3`}}.iso",
       "shutdown_command": "shutdown -hP now",
       "ssh_password": "{{user `password`}}",
       "ssh_username": "{{user `username`}}",
@@ -43,12 +43,6 @@
     }
   ],
   "description": "Faithful Stage 3 Gentoo Installation (VMWare)",
-  "post-processors": [
-    {
-      "output": "gentoo-amd64-stage3-vmware.box",
-      "type": "vagrant"
-    }
-  ],
   "provisioners": [
     {
       "destination": "/tmp",
@@ -69,7 +63,7 @@
   ],
   "variables": {
     "password": "packer",
-    "stage3": "20141002",
+    "stage3": "20180809T214504Z",
     "username": "root"
   }
 }
